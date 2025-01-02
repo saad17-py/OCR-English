@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCRvision</title>
+    <script>
+        function uploadNew() {
+            window.location.href = "/";
+        }
+        function copyText() {
+            const textArea = document.getElementById('extracted-text');
+            textArea.select();
+            document.execCommand('copy');
+            alert('Text copied to clipboard!');
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ff8c42;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        header .header-left {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .title {
+            background-color: #f5d788;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            border-radius: 4px;
+        }
+        .upload-section {
+            margin: 20px 0;
+        }
+        .upload-section h2 {
+            font-size: 18px;
+            color: #b71c1c;
+        }
+        .upload-box {
+            background-color: #fef4e8;
+            border: 2px dashed #b71c1c;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            position: relative;
+        }
+        .upload-box img {
+            width: 50px;
+            opacity: 0.6;
+            margin-bottom: 10px;
+        }
+        .upload-box p {
+            color: #333;
+            font-size: 14px;
+            margin: 10px 0;
+        }
+        .upload-box button {
+            background-color: #b71c1c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .language-section {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .language-section h2 {
+            font-size: 16px;
+            color: #333;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            background-color: #b71c1c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        footer {
+            background-color: #f5d788;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        footer a {
+            color: #ff8c42;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-left">OCR Vision</div>
+    </header>
+    <main class="container">
+        <div class="title">
+            Image to Text Converter<br>
+            <span>An Online OCR model that extracts text from images</span>
+        </div>
+        <div class="upload-section">
+            <h2>Upload Image</h2>
+            <form action="/upload" method="post" enctype="multipart/form-data">
+                <div class="upload-box">
+                    <img src="{{ url_for('serve_template_file', filename='image-icon.jpg') }}" alt="Image Upload Icon">
+                    <p>Drop, Upload or Paste image<br>Supported formats: JPG (JPEG), PNG, JFIF</p>
+                    <input type="file" name="image" accept="image/*" required>
+                    <div class="language-section">
+                        <h2>The image must contain English text.</h2>
+                    </div>
+                    <div class="button-container">
+                        <button type="submit">Next</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>We present an online OCR (Optical Character Recognition) model that extracts text from images.</p>
+        <p>Copyright © All rights reserved | Made by <a href="#">Hammad Mustafa, Hamda Azam, Muhammad Saad</a></p>
+    </footer>
+</body>
+</html>
