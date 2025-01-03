@@ -31,8 +31,8 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
    winget install wget
    ```
 
-3. Download make from this link:
-   Download Make[here](https://sourceforge.net/projects/ezwinports/files/make-4.4.1-without-guile-w32-bin.zip/download?use_mirror=cyfuture).
+3. Download **make** from this link:
+   Download Make[here](https://sourceforge.net/projects/ezwinports/files/make-4.4.1-without-guile-w32-bin.zip/download?use_mirror=cyfuture). OR I already uploaded zip file in the repository named as **make-4.4.1-without-guile-w32-bin**
    - Create a folder in Disk C and name it Tools.
    - Extract the make zip file into the Tools folder.
 
