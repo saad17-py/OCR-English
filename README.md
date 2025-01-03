@@ -78,6 +78,7 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
    ```text
    C:\Program Files\Tesseract-OCR\tessdata\
    ```
+
 ### Step 5: Train the OCR Model
 
 1. Open the OCR folder in VS Code.
@@ -87,4 +88,10 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
    pip install -r requirements.txt
    ```
 
-3. Create a Python file named app.py and write the code to open an image and extract its text using Tesseract-OCR.
+3. Run the **app.py** file with correct directories.
+
+4. In Terminal, a port link will be generated through flask, holding CTRL and left mouse button, click on it and it will take you to web interface.
+
+   ![image](https://github.com/user-attachments/assets/29cd72da-2f42-41d5-a212-f2ca07f84809)
+
+5. Make sure that picture have the English language text written on it.
