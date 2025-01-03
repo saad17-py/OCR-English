@@ -32,11 +32,13 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
    ```
 
 3. Download **make** from this link:
-   Download Make[here](https://sourceforge.net/projects/ezwinports/files/make-4.4.1-without-guile-w32-bin.zip/download?use_mirror=cyfuture). OR I already uploaded zip file in the repository named as **make-4.4.1-without-guile-w32-bin**
+   Download Make [here](https://sourceforge.net/projects/ezwinports/files/make-4.4.1-without-guile-w32-bin.zip/download?use_mirror=cyfuture).
+                                    OR
+   I already uploaded zip file in the repository named as **make-4.4.1-without-guile-w32-bin**
    - Create a folder in Disk C and name it Tools.
    - Extract the make zip file into the Tools folder.
 
-4. Add the path to the make-4.4.1 folder to your system’s environmental variables.
+5. Add the path to the make-4.4.1 folder to your system’s environmental variables.
    ```shell
    make --version
    wget --version
