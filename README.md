@@ -6,6 +6,8 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
 
 ## Steps to Set Up  
 
+- Make sure that Python with latest version and Git Bash is installed in your system.
+- 
 ### Step 1: Install Tesseract-OCR  
 1. Download the latest version of Tesseract-OCR from [here](https://github.com/UB-Mannheim/tesseract/wiki).  
 2. Run the setup, select the languages of your choice, and complete the installation.  
@@ -80,4 +82,9 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
 
 1. Open the OCR folder in VS Code.
 
-2. Create a Python file named app.py and write the code to open an image and extract its text using Tesseract-OCR.
+2. Run following command in the cmd to install the required libraries for program execution.
+   ```shell
+   pip install -r requirements.txt
+   ```
+
+3. Create a Python file named app.py and write the code to open an image and extract its text using Tesseract-OCR.
