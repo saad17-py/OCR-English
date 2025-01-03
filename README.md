@@ -56,7 +56,7 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
    - Create a folder named Data within tesstrain.
    - Extract ocrd-testset.zip into the Data folder.
 
-3. Rename the folder from ocrd-testset to eng-ground-truth.
+3. Rename the folder from ocrd-testset to sample-ground-truth.
 
 ### Step 4: Train the OCR Model
 
@@ -66,12 +66,12 @@ This project leverages **Tesseract-OCR** to extract text from images, supporting
 
 3. Start training the model by running the command:
    ```shell
-   make training MODEL_NAME=eng START_MODEL=deu_latf TESSDATA=../tessdata/ MAX_ITERATIONS=500 LEARNING_RATE=0.001
+   make training MODEL_NAME=sample START_MODEL=deu_latf TESSDATA=../tessdata/ MAX_ITERATIONS=500 LEARNING_RATE=0.001
    ```
 
 4. Allow the process to complete; this may take several minutes.
 
-5. After training, navigate to the Data folder and locate the file eng.traineddata.
+5. After training, navigate to the Data folder and locate the file sample.traineddata.
    - Copy this file to:
    ```text
    C:\Program Files\Tesseract-OCR\tessdata\
